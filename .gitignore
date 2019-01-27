@@ -1,0 +1,14 @@
+
+*.lock
+
+*.ide
+
+*.ide-shm
+
+*.ide-wal
+
+Coinstantine.FloatingMenu.Abstractions/bin/Debug/netstandard2.0/Coinstantine.FloatingMenu.Abstractions.pdb
+
+*.pdb
+
+*.cache
