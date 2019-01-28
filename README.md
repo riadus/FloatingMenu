@@ -1,6 +1,9 @@
 # FloatingMenu
 Floating menu for Xamarin.iOS and Xamarin.Android with Font icons (like FontAwesome or others).
 
+## FloatingMenu in Coinstantine App for iOS
+![Demo on iOS](https://github.com/riadus/FloatingMenu/blob/master/Images/FloatingMenuiOS.gif)
+
 ## Setup
 
 ### iOS
