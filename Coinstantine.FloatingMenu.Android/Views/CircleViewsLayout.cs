@@ -203,6 +203,7 @@ namespace Coinstantine.FloatingMenu.Android.Views
                         BottomToBottom = view.Id,
                         LeftToLeft = guideline.Id,
                     };
+
                     _bottomItem.Populate();
                     AddView(_bottomItem, bottomItemLayoutParameters);
                     _bottomItem.TranslationX = -15.ToPixels(Context);
