@@ -20,7 +20,6 @@ namespace Coinstantine.FloatingMenu.Android.Views
             _menuItemContext = menuItemContext;
             _menuStyle = menuStyle;
             InitializeComponents();
-            Populate();
         }
 
         public void Populate()
@@ -33,7 +32,13 @@ namespace Coinstantine.FloatingMenu.Android.Views
             _titleTextView.Text = _menuItemContext.Text;
             _titleTextView.ChangeStatus(_menuItemContext.IsEnabled);
 
-            _button.Click += (sender, e) => _menuItemContext.SelectionCommand.Execute(null);
+            _button.Click -= _button_Click;
+            _button.Click += _button_Click;
+        }
+
+        void _button_Click(object sender, System.EventArgs e)
+        {
+            _menuItemContext.SelectionCommand.Execute(null);
         }
 
         private TextView _iconTextView { get; set; }
