@@ -1,5 +1,6 @@
 # FloatingMenu
-Floating menu for Xamarin.iOS and Xamarin.Android with Font icons (like FontAwesome or others).
+Floating menu for Xamarin.iOS and Xamarin.Android with Font icons (like FontAwesome or others).  
+NuGet package : [![NuGet](https://img.shields.io/nuget/v/FloatingMenu.Riad.svg?label=NuGet&style=flat-square)](https://www.nuget.org/packages/FloatingMenu.Riad/) 
 
 ## Demo of FloatingMenu in Coinstantine App
 ![Demo on iOS](https://github.com/riadus/FloatingMenu/blob/master/Images/FloatingMenuiOS.gif)
