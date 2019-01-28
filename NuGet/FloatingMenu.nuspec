@@ -2,20 +2,19 @@
 <package >
   <metadata>
     <id>FloatingMenu.Riad</id>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <authors>Riad Lakehal-Ayat</authors>
     <owners>Riad Lakehal-Ayat</owners>
     <projectUrl>https://github.com/riadus/FloatingMenu</projectUrl>
     <license type="file">License.txt</license>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Floating menu for Xamarin.iOS and Xamarin.Android</description>
-    <summary>Component to have a nice floating menu</summary>
+    <summary>Floating menu for Xamarin.iOS and Xamarin.Android. Using custom fonts as icons (FontAwesome and others)</summary>
     <releaseNotes>Open sourcing the code of the menu developed for Coinstantine App</releaseNotes>
     <copyright>Copyright 2019</copyright>
     <tags>Floating menu, Xamarin, Xamarin.iOS, Xamarin.Android</tags>
     <dependencies>
           <group targetFramework="MonoAndroid0.0">
-              <dependency id="Plugin.CurrentActivity" version="2.1.0.4" />
               <dependency id="Xamarin.Android.Support.Constraint.Layout" version="1.1.2" />
               <dependency id="Xamarin.Android.Support.Constraint.Layout.Solver" version="1.1.2" />
           </group>
@@ -24,9 +23,9 @@
     </dependencies>
   </metadata>
   <files>
-        <file src="Coinstantine.FloatingMenu.Abstractions/bin/Release/netstandard2.0/Coinstantine.FloatingMenu.*" target="lib\netstandard2.0" />
-        <file src="Coinstantine.FloatingMenu.Android/bin/Release/Coinstantine.FloatingMenu.*" target="lib\MonoAndroid10" />
-        <file src="Coinstantine.FloatingMenu.iOS/bin/Release/Coinstantine.FloatingMenu.*" target="lib\xamarinios10" />
-        <file src="License.txt" target="" />
+        <file src="../Coinstantine.FloatingMenu.Abstractions/bin/Release/netstandard2.0/Coinstantine.FloatingMenu.*" target="lib\netstandard2.0" />
+        <file src="../Coinstantine.FloatingMenu.Android/bin/Release/Coinstantine.FloatingMenu.*" target="lib\MonoAndroid10" />
+        <file src="../Coinstantine.FloatingMenu.iOS/bin/Release/Coinstantine.FloatingMenu.*" target="lib\xamarinios10" />
+        <file src="../License.txt" target="" />
     </files>
 </package>

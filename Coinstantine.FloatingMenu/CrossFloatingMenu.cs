@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+#if __ANDROID__
 using Android.App;
+#endif
 using Coinstantine.FloatingMenu.Abstractions;
 
 namespace Coinstantine.FloatingMenu
