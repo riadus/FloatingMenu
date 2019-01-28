@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Android.App;
 using Coinstantine.FloatingMenu.Abstractions;
 
 namespace Coinstantine.FloatingMenu
@@ -57,5 +58,22 @@ namespace Coinstantine.FloatingMenu
             }
             return _fontsDictionnary[key];
         }
+
+#if __ANDROID__
+        private static Func<Activity> _activityResolver;
+        public static Activity CurrentActivity => GetCurrentActivity();
+        private static Activity GetCurrentActivity()
+        {
+            if (_activityResolver == null)
+                throw new InvalidOperationException("Resolver for the current activity is not set. Call CrossFloatingMenu.SetCurrentActivityResolver somewhere in your startup code.");
+
+            return _activityResolver();
+        }
+
+        public static void SetCurrentActivityResolver(Func<Activity> activityResolver)
+        {
+            _activityResolver = activityResolver;
+        }
+#endif
     }
 }

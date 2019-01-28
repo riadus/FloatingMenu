@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Diagnostics;
+using System.Linq;
 using Coinstantine.FloatingMenu.Abstractions;
 using UIKit;
 
@@ -22,6 +23,18 @@ namespace Coinstantine.FloatingMenu.iOS.Extensions
         public static string ToCode(this string key, IFonts fonts)
         {
             return fonts.GetCode(key);
+        }
+
+        public static void PrintAllFonts()
+        {
+            foreach (var fontFamily in UIFont.FamilyNames.OrderBy(x => x))
+            {
+                Debug.WriteLine($"* Family : {fontFamily}");
+                foreach (var font in UIFont.FontNamesForFamilyName(fontFamily))
+                {
+                    Debug.WriteLine($"* --- Font : {font}");
+                }
+            }
         }
     }
 }

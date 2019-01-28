@@ -10,12 +10,4 @@ namespace Coinstantine.FloatingMenu.Abstractions
         Task HideMenu();
         Task ShowMenuFrom(IEnumerable<MenuItemContext> items, TouchLocation touchLocation);
     }
-
-    public class AppColor
-    {
-        public int? Alpha { get; set; }
-        public int Red { get; set; }
-        public int Green { get; set; }
-        public int Blue { get; set; }
-    }
 }

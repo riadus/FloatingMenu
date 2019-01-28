@@ -7,6 +7,5 @@ namespace Coinstantine.FloatingMenu.Abstractions
         AppColor CrossColor { get; set; }
         IFonts Fonts { get; set; }
         AppColor CircleColor { get; set; }
-        string GetFontFamily(string key);
     }
 }

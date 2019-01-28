@@ -3,7 +3,6 @@ using System.Threading.Tasks;
 using Android.App;
 using Coinstantine.FloatingMenu.Abstractions;
 using Coinstantine.FloatingMenu.Android.Views;
-using Plugin.CurrentActivity;
 
 namespace Coinstantine.FloatingMenu
 {
@@ -25,13 +24,13 @@ namespace Coinstantine.FloatingMenu
 
         public Task ShowMenu(IEnumerable<MenuItemContext> items)
         {
-            _currentContext = CrossCurrentActivity.Current.Activity;
+            _currentContext = CrossFloatingMenu.CurrentActivity;
             _currentContext.RunOnUiThread(() =>
             {
                 lock (_locker)
                 {
                     var fragment = new FloatingMenuFragment(_currentContext, items, _menuStyle, HideFragment);
-                    fragment.Show(CrossCurrentActivity.Current.Activity.FragmentManager, Tag);
+                    fragment.Show(CrossFloatingMenu.CurrentActivity.FragmentManager, Tag);
                 }
             });
 
@@ -40,7 +39,7 @@ namespace Coinstantine.FloatingMenu
 
         private Task HideFragment()
         {
-            _currentContext = _currentContext ?? CrossCurrentActivity.Current.Activity;
+            _currentContext = _currentContext ?? CrossFloatingMenu.CurrentActivity;
             _currentContext.RunOnUiThread(() =>
             {
                 lock (_locker)
@@ -68,6 +67,5 @@ namespace Coinstantine.FloatingMenu
         {
             _menuStyle = style;
         }
-
     }
 }
