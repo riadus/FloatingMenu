@@ -1,7 +1,6 @@
 ﻿using System.Linq;
 using Android.Graphics;
 using Coinstantine.FloatingMenu.Abstractions;
-using Plugin.CurrentActivity;
 
 namespace Coinstantine.FloatingMenu.Android.Extensions
 {
@@ -11,7 +10,7 @@ namespace Coinstantine.FloatingMenu.Android.Extensions
         {
             var font = fonts.MenuItemFonts.First(x => x.Key == key);
             var fontFamily = CrossFloatingMenu.GetFontFamily(font.FontFamily);
-            return Typeface.CreateFromAsset(CrossCurrentActivity.Current.Activity.Assets, fontFamily);
+            return Typeface.CreateFromAsset(CrossFloatingMenu.CurrentActivity.Assets, fontFamily);
         }
 
         public static Color ToColor(this string key, IFonts fonts)
